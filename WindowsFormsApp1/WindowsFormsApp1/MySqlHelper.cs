@@ -106,6 +106,21 @@ namespace WindowsFormsApp1
             return ExecuteNonQuery(sql, type, ps);
         }
 
+        public static int ExecuteNonQuery(string sql)
+        {
+            int rows = -1;
+            string connectString = "server=localhost;User Id=root;password=123456;Database=library;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectString))
+            {
+                MySqlCommand myCommand = new MySqlCommand(sql, conn);
+                conn.Open();
+                rows = myCommand.ExecuteNonQuery();
+            }
+
+            return rows;
+        }
+
         // 执行sql语句 返回首行首列
         public static object ExecuteScalar(string sql)
         {

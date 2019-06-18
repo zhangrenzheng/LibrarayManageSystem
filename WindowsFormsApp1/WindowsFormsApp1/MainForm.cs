@@ -70,6 +70,17 @@ namespace WindowsFormsApp1
                 toolStripStatusLabel4.Text = "权限级别：管理员";
                 toolStripStatusLabel1.Text = "   " + Name1;
             }
+
+            //  以下两个步骤可以放到最后再做
+
+            // 窗口加载时处理借书表内逾期的记录 
+            string sql = string.Format("update borrowlist set overDue = '1' where returnDate < curdate()");
+            MySqlHelper.ExecuteNonQuery(sql);
+
+            // 封禁逾期的用户
+            sql = string.Format("update users set userBan = '1' where userId in (select distinct(userId) from borrowlist where overDue = '1')");
+            MySqlHelper.ExecuteNonQuery(sql);
+
         }
 
         // 退出时关闭所有窗口（login）
@@ -159,5 +170,27 @@ namespace WindowsFormsApp1
             sBF.ShowDialog();
         }
         #endregion
+
+        #region 借书管理
+        private void BorrowBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BorrowBookForm bBF = new BorrowBookForm();
+            bBF.Id = this.ID;
+            bBF._Tag = this._Tag;
+            bBF.ShowDialog();
+        }
+        #endregion
+
+        #region 还书管理
+        private void ReturnBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReturnBookForm rBF = new ReturnBookForm();
+            rBF.Id = this.ID;
+            rBF._Tag = this._Tag;
+            rBF.B = this.B;
+            rBF.ShowDialog();
+        }
+        #endregion
+
     }
 }

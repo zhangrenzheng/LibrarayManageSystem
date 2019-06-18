@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
         private void GetData()
         {
             // 获取页大小
-            int pageSize = 10;
+            //int pageSize = 10;
             // 计算最多有多少页--Math.Ceiling--向上取整
             // Convert.ToInt32(SqlHelper.ExecuteScalar("select count(*) from books"))得到数据记录总数
             //maxIndex = (int)Math.Ceiling((Convert.ToInt32(MySqlHelper.ExecuteScalar("select count(*) from books")) * 1.0 / pageSize));

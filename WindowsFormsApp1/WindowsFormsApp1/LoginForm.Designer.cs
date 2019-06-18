@@ -46,7 +46,6 @@
             this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "账号：";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxId
             // 
@@ -54,7 +53,6 @@
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(181, 25);
             this.textBoxId.TabIndex = 1;
-            this.textBoxId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -84,7 +82,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "用户";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -123,7 +120,6 @@
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
             this.Text = "图书管理系统 - 登陆";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

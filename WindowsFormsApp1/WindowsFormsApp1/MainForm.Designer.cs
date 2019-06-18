@@ -37,8 +37,8 @@
             this.DeleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.图书管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.借书管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.还书管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BorrowBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReturnBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +82,7 @@
             // AddUserToolStripMenuItem
             // 
             this.AddUserToolStripMenuItem.Name = "AddUserToolStripMenuItem";
-            this.AddUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.AddUserToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
             this.AddUserToolStripMenuItem.Text = "注册用户";
             this.AddUserToolStripMenuItem.Click += new System.EventHandler(this.AddUserToolStripMenuItem_Click);
             // 
@@ -92,7 +92,7 @@
             this.ModifyUserInfoToolStripMenuItem,
             this.ChangePasswdToolStripMenuItem});
             this.用户信息修改ToolStripMenuItem.Name = "用户信息修改ToolStripMenuItem";
-            this.用户信息修改ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.用户信息修改ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
             this.用户信息修改ToolStripMenuItem.Text = "用户信息修改";
             // 
             // ModifyUserInfoToolStripMenuItem
@@ -112,7 +112,7 @@
             // DeleteUserToolStripMenuItem
             // 
             this.DeleteUserToolStripMenuItem.Name = "DeleteUserToolStripMenuItem";
-            this.DeleteUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.DeleteUserToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
             this.DeleteUserToolStripMenuItem.Text = "注销用户";
             this.DeleteUserToolStripMenuItem.Click += new System.EventHandler(this.DeleteUserToolStripMenuItem_Click);
             // 
@@ -120,8 +120,8 @@
             // 
             this.图书管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddBookToolStripMenuItem,
-            this.借书管理ToolStripMenuItem,
-            this.还书管理ToolStripMenuItem,
+            this.BorrowBookToolStripMenuItem,
+            this.ReturnBookToolStripMenuItem,
             this.DeleteBookToolStripMenuItem});
             this.图书管理ToolStripMenuItem.Name = "图书管理ToolStripMenuItem";
             this.图书管理ToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
@@ -134,17 +134,19 @@
             this.AddBookToolStripMenuItem.Text = "图书入库";
             this.AddBookToolStripMenuItem.Click += new System.EventHandler(this.AddBookToolStripMenuItem_Click);
             // 
-            // 借书管理ToolStripMenuItem
+            // BorrowBookToolStripMenuItem
             // 
-            this.借书管理ToolStripMenuItem.Name = "借书管理ToolStripMenuItem";
-            this.借书管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.借书管理ToolStripMenuItem.Text = "借书管理";
+            this.BorrowBookToolStripMenuItem.Name = "BorrowBookToolStripMenuItem";
+            this.BorrowBookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.BorrowBookToolStripMenuItem.Text = "借书管理";
+            this.BorrowBookToolStripMenuItem.Click += new System.EventHandler(this.BorrowBookToolStripMenuItem_Click);
             // 
-            // 还书管理ToolStripMenuItem
+            // ReturnBookToolStripMenuItem
             // 
-            this.还书管理ToolStripMenuItem.Name = "还书管理ToolStripMenuItem";
-            this.还书管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.还书管理ToolStripMenuItem.Text = "还书管理";
+            this.ReturnBookToolStripMenuItem.Name = "ReturnBookToolStripMenuItem";
+            this.ReturnBookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.ReturnBookToolStripMenuItem.Text = "还书管理";
+            this.ReturnBookToolStripMenuItem.Click += new System.EventHandler(this.ReturnBookToolStripMenuItem_Click);
             // 
             // DeleteBookToolStripMenuItem
             // 
@@ -166,20 +168,20 @@
             // SearchBookToolStripMenuItem
             // 
             this.SearchBookToolStripMenuItem.Name = "SearchBookToolStripMenuItem";
-            this.SearchBookToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.SearchBookToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.SearchBookToolStripMenuItem.Text = "图书查询";
             this.SearchBookToolStripMenuItem.Click += new System.EventHandler(this.SearchBookToolStripMenuItem_Click);
             // 
             // 借书单查询ToolStripMenuItem
             // 
             this.借书单查询ToolStripMenuItem.Name = "借书单查询ToolStripMenuItem";
-            this.借书单查询ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.借书单查询ToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.借书单查询ToolStripMenuItem.Text = "借书单查询";
             // 
             // 用户查询ToolStripMenuItem
             // 
             this.用户查询ToolStripMenuItem.Name = "用户查询ToolStripMenuItem";
-            this.用户查询ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.用户查询ToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.用户查询ToolStripMenuItem.Text = "用户查询";
             // 
             // statusStrip1
@@ -265,8 +267,8 @@
         private System.Windows.Forms.ToolStripMenuItem DeleteUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 图书管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 借书管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 还书管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BorrowBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReturnBookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DeleteBookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 信息查询ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SearchBookToolStripMenuItem;
