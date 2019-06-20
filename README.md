@@ -22,6 +22,28 @@
 - 图书查询
 
 
+## 数据库
+
+总共四个表：用户表 users、管理员表 admin、图书表 books 以及借书表 borrowlist  
+
+用户表：
+
+![](https://github.com/zhangrenzheng/LibrarayManageSystem/blob/master/img/Snipaste_2019-06-20_13-42-54.png)
+
+管理员表：
+
+![](https://github.com/zhangrenzheng/LibrarayManageSystem/blob/master/img/Snipaste_2019-06-20_13-40-35.png)
+
+图书表：
+
+![](https://github.com/zhangrenzheng/LibrarayManageSystem/blob/master/img/Snipaste_2019-06-20_13-41-26.png)
+
+借书表：
+
+![](https://github.com/zhangrenzheng/LibrarayManageSystem/blob/master/img/Snipaste_2019-06-20_13-42-01.png)
+
+具体表结构可以查看在 img 文件夹下的图片。  
+
 ## 主要界面
 
 登陆窗口  
