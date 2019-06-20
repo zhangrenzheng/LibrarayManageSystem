@@ -66,3 +66,9 @@
 
 本项目由 https://github.com/ygsama/BooK-Library-System 修(chao)改(xi)而来，非常感谢 [@ygsama](https://github.com/ygsama)  
 
+## 常见问题
+
+查看 Wiki
+
+https://github.com/zhangrenzheng/LibrarayManageSystem/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98
+
