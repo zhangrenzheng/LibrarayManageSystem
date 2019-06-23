@@ -119,6 +119,11 @@ namespace WindowsFormsApp1
                 MessageBox.Show("因逾期未还书账户被锁定，请及时解锁，并缴纳罚款！", "警告");
                 return;
             }
+            else if (BorrowNumberTextBox.Text.Trim() == "")
+            {
+                MessageBox.Show("请选择需要归还的图书！", "警告");
+                return;
+            }
             else
             {
                 // 办理借书手续
