@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                // 自动获得图书序列号
+                // 自动生成借书单号
                 string sql = "select COUNT(*)+1 from borrowlist";
                 string borrowNumber = MySqlHelper.ExecuteScalar(sql).ToString();
                 StringBuilder sb = new StringBuilder(borrowNumber);
